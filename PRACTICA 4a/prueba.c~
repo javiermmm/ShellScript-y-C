@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+void main() {
+
+	int i = 10;
+	system ("sleep " + i);
+	system ("sleep 10");
+
+	return 0;
+}

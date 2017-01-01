@@ -1,0 +1,15 @@
+#!/bin/bash
+
+for i in *
+do 
+	if [-l $i]
+	then
+		echo "$i" es un enlace simbólico
+	elif [-d $i]
+	then
+		echo "$i" es un directorio
+	elif [-f $i]
+	then
+		echo "$i" es un fichero regular
+	fi
+done

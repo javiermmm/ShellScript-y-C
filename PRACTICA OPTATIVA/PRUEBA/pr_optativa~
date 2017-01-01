@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ ?# -ne 1 ]
+then
+	echo Número de parámetros ?# incorrecto: debe ser introducido un solo parámetro;
+else
+	

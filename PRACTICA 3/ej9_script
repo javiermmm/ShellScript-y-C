@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#establecemos el directorio en el que queremos realizar las copias, y el numero de copias con sendas variables
+dir=$HOME/bin
+numCopias=0
+
+#Comprobamos si existe, y lo creamos en caso de que no
+if test ! -d $dir
+then
+	mkdir $dir
+fi
+
+#para cada fichero ejecutable, realizamos una copia en dir y actualizamos el contador de copias
+for fichero in *
+do
+	if [ -x $fichero -a -f $fichero ]
+	then
+		cp $fichero $dir
+		numCopias=`expr $numCopias + 1`
+	fi
+done
+
+#mostramos el numero de copias por pantalla
+if $fichero != '*.exe'
+then
+	echo El número de archivos copiados ha sido $numCopias
+else
+	echo El número de archivos copiados ha sido 0
+fi

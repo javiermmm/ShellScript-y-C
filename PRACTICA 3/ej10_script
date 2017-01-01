@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#comprobamos si se ha recibido el argumento esperado
+if [ $# -lt 1 ]
+then
+	echo se esperaba un argumento
+else
+
+	#Si la cadena está vacía el usuario no está en el sistema
+	#Si la cadena no está vacia, significa que el usuario está en el sistema y mostramos la hora a la que entró
+
+	#guardamos las posibles coincidencias entre el usuario buscado y los que ya están en el sistema
+	until who | grep $1 > /dev/null
+	do
+		sleep 20
+	done
+
+	fecha=`who | grep $1 | tr -s ' ' | cut -d' ' -f4`
+	echo El usuario $1 entró con fecha $fecha
+fi

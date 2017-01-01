@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Añadir la ruta a la variable PATH
+export PATH=$PATH:$HOME/bin
+
+#Dar permisos de ejecucion a los ficheros ejecutables
+for fichero in *.exe
+do
+	chmod +x $fichero
+done

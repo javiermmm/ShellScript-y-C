@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Guardamos en variables los datos constantes para mayor comodidad frente a posibles cambios posteriores
+segundos=30
+fichero=fichero.txt
+
+#Realizamos infinitas veces la comprobacion para ver si existe el fichero
+#Adicionalmente, mostramos un mensaje por pantalla, para poder seguir visualmente la ejecucion del script
+while [ true ] 
+do
+	if test -a $fichero
+	then
+		echo El fichero $fichero se encuentra en el directorio actual
+	else
+		echo El fichero $fichero NO EXISTE en este momento
+	fi
+	sleep $segundos
+done

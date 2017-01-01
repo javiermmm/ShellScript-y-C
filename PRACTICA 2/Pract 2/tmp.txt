@@ -1,0 +1,26 @@
+total 96
+-rwxrwxrwx 1 usuario_local users   118 feb 21 12:05 archi.c~
+-rwxrwxrwx 1 usuario_local users   129 feb 21 12:13 archi_n.c~
+-rwxr-xr-x 1 usuario_local users 28560 feb 28 12:17 badsort
+-rw-r--r-- 1 usuario_local users  1329 feb 28 12:27 badsort.c
+-rw-r--r-- 1 usuario_local users  1329 feb 28 12:27 badsort.c~
+drwxr-xr-x 3 usuario_local users  4096 feb 28 16:09 Desktop
+-rw-r--r-- 1 usuario_local users    33 feb 28 16:39 dirlist1
+-rw-r--r-- 1 usuario_local users     6 feb 28 16:39 dirlist1~
+lrwxrwxrwx 1 usuario_local users    12 feb 28 16:42 dirlist2 -> fichero1.txt
+-rw-r--r-- 1 usuario_local users    23 feb 28 16:39 dirlist2~
+-rw-r--r-- 1 usuario_local users     0 feb 28 16:13 Fich1.txt
+-rw-r--r-- 1 usuario_local users     0 feb 28 16:13 fich2.txt
+-rw-r--r-- 1 usuario_local users     0 feb 28 16:13 fich3.txt
+-rw-r--r-- 1 usuario_local users    33 feb 28 16:39 fichero1.txt
+-rw-r--r-- 1 usuario_local users     0 feb 28 16:38 fichero1.txt~
+-rw-r--r-- 1 usuario_local users     0 feb 28 16:13 fichero2.txt
+drwxr-xr-x 3 usuario_local users  4096 sep 23 19:07 IBM
+drwxr-xr-x 3 usuario_local users  4096 feb 21 18:26 Organizado
+drwxr-xr-x 6 usuario_local users  4096 feb 28 11:29 Polinomio
+-rw-r--r-- 1 usuario_local users   365 feb 28 16:17 Prac1.tar.gz
+dr--r--r-- 4 usuario_local users  4096 feb 28 16:13 Practica1
+-rw-r--r-- 1 usuario_local users   313 feb 21 11:27 saludo.c~
+-rw-r--r-- 1 usuario_local users     0 feb 28 17:26 tmp.txt
+drwxr-xr-x 3 usuario_local users  4096 feb 21 09:20 workspace
+drwxr-xr-x 3 usuario_local users  4096 feb 21 18:07 Z

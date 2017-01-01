@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Comprobamos que el directorio Practica1 existe y según el resultado
+#mostramos un mensaje (caso negativo)
+#o realizamos la operacion de lisatdo (caso afirmativo)
+if test ! -d $HOME/Practica1;
+then
+	echo El directorio no existe
+
+else
+	ls -l ./Practica1 | grep '^-r' > listadir
+fi
+

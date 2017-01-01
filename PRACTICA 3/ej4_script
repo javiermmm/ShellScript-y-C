@@ -1,0 +1,21 @@
+#!/bin/bash/
+
+#Comprobamos si se ha introducido el argumento esperado
+if [ $# -lt 1 ]; then
+	echo ERROR: SE ESPERABA UN ARGUMENTO
+else
+	#Comprobamos que esxista el directorio pasado como argumento.
+	#Si existe, realizamos la copia.
+	#Si NO existe, lo creamos y realizamos la copia
+	if test ! -d $1; then
+		mkdir $1
+	fi
+
+	#realizamos la copia de los ficheros
+	for fichero in *.c *.dat
+		do
+			cp $fichero $1
+		done
+fi
+
+

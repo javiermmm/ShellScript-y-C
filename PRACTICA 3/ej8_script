@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#le damos a la variable A el valor de la cadena 'Ana'
+A=Ana
+
+#comprobamos la variable anterior
+echo `set | grep '^A'`
+
+#iniciamos una subshell
+sh
+
+#miramos los procesos generados hasta el momento
+ps -f
+
+#comprobamos que en la nueva subshell, la variable A no está establecida
+echo `set | grep '^A'`
+
+#salimos de la subshell
+exit
+
+#exportamos la variable A
+export A
+
+#verificamos que A se encuentra en el entorno
+env |  grep '^A'
+
+#iniciamos una subshell y verificamos que a sigue estando disponible
+sh
+echo `set | grep '^A'`

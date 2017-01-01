@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Comprobamos si el argumento proporcionado es un directorio existente en el directorio actual.
+#Si no existe mostramos un mensaje por pantalla, en caso contrario contamos los ficheros de dicho directorio
+#para determinar si está vacío o no.
+if test -d $1
+then
+	x=`ls -l $1 | wc -l`
+	if [ $x = 1 ]
+	then
+		echo Esta vacio
+	else
+		echo NO esta vacio
+	fi
+else
+	echo NO EXISTE
+fi

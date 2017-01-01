@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#Primero comprobamos que nos han introducido los argumentos esperados.
+#En caso de respuesta negativa, mostraremos por pantalla un mensaje
+if [ $# -lt 2 ]
+then
+	echo Se esperaban DOS argumentos
+else
+	#En este punto calculamos cuantos procesos del tipo del argumento 1,
+	#y cuantos del tipo del argumento2, hay ejecutándose en este momento
+	vecesProc1=`ps | tr -s ' ' | grep $1 | wc -l`
+	vecesProc2=`ps | tr -s ' ' | grep $2 | wc -l`
+
+	#Con este primer bucle vamos "matando" uno a uno los procesos activos del tipo del argumento 1
+	while [ $vecesProc1 -ne 0 ]
+	do
+		#Nos quedamos el PID de la primera aparicion
+		PIDproc1=`ps | tr -s ' ' | grep $1 | head -1 | cut -d' ' -f2`
+		#Matamos el proceso
+		kill $PIDproc1
+		#Actualizamos el contador
+		vecesProc1=`expr $vecesProc1 - 1`
+	done
+
+	#Con este segundo bucle vamos "matando" uno a uno los procesos activos del tipo del argumento 2
+	while [ $vecesProc2 -ne 0 ]
+	do
+		#Nos quedamos el PID de la primera aparicion
+		PIDproc2=`ps | tr -s ' ' | grep $2 | head -1 | cut -d' ' -f2`
+		#Matamos el proceso
+		kill $PIDproc2
+		#Actualizamos el contador
+		vecesProc2=`expr $vecesProc2 - 1`
+	done
+fi
+

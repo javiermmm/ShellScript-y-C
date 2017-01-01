@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#.bashrc
+
+alias cd..="cd .."
+
+alias ll="ls -l"
+
+
+if [ -f"/etc/bashrc" ]; then
+	source /etc/bashrc
+fi
+

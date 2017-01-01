@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Literalmente: Para cada elemento que coincida con cualquier patrón (cualquier tipo de archivo)
+#comprobamos si es un enlace simbólico, un directorio, o un fichero regular
+#y mostramos un mensaje por pantalla con el resultado de las comprobaciones
+for elemento in *
+do 
+	if test -L $elemento
+	then
+		echo "$elemento" es un enlace simbólico
+	elif test -d $elemento
+	then
+		echo "$elemento" es un directorio
+	elif test -f $elemento
+	then
+		echo "$elemento" es un fichero regular
+	fi
+done

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Guardamos en una variable el resultado de ejecutar el comando propuesto
+fecha=`date +%Y%m%d`
+
+#Guardamos en otra variable la composicion del nombre de la carpeta destino donde queremos realizar la copia
+carpetaDestino=backupsC-$fecha
+
+#ejecutamos el script en el que definimos la funcion copiar
+. ej5_script
+
+#ejecutmos la funcion copiar
+copiar $carpetaDestino
